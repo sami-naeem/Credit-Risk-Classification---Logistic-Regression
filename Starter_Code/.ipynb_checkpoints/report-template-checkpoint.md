@@ -4,28 +4,25 @@
 
 In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
 
-* Explain the purpose of the analysis.
-* Explain what financial information the data was on, and what you needed to predict.
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
-* Describe the stages of the machine learning process you went through as part of this analysis.
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any resampling method).
+The purpose of this analysis was to identify healthy and risky loans. The lending data of users was used to perform the analysis, which included a wide range of data points like debt to income ratio and borrower income. 
+
+In this analysis, we were tring to predict the loan status, with binary result values of either 0 (Healthy Loan) or 1 (High-Risk Loan). As part of this analysis, we stared with splitting the data into training and testing data, and then conducted a logistic regression analysis. 
+
+A second iteraton of the logistic regression analysis was conducted with resampled training data, instead of the original data. 
+
 
 ## Results
 
 Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all machine learning models.
 
 * Machine Learning Model 1:
-  * Description of Model 1 Accuracy, Precision, and Recall scores.
-
-
-
+  * The first machine learning model has both a high precision and recall for both "0" and "1", so it predicted well. The preciosn and recall for "0" is almost 100%, where as "1" has a fairly high precision and recall of 0.87 and 0.89, respectively. The model has a high accuracy of 0.99 as well.  
+  
+  
+  
 * Machine Learning Model 2:
-  * Description of Model 2 Accuracy, Precision, and Recall scores.
+  * In the second machine learning model, the "0" loans still have a high precision and recall of 100%. The "1" loan's precision is still the same at 0.87; however, the recall has increased from 0.89 to 0.93. Therefore, the model is a better fit for the oversampled data and has a better predicitive ability. The model has a accuracy of 1.00. The model performs better, or just as well as, than the first model with respect to all the metrics. 
 
 ## Summary
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
-
-If you do not recommend any of the models, please justify your reasoning.
+The second model should be used since it has a better recall and accuracy than the first model. More importantly, the model has a much better recall for risky loans. Risky loans pose a much greater risk since they pose the possibility of a higher financial loss, so the second model should be preferred.  
